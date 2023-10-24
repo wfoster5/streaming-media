@@ -66,8 +66,9 @@ ul{
     background-color: #2104d9;
     max-height: 0;
     overflow: hidden;
+    transition: max-height .2s ease-out;
 }
-   /* transition: max-height .2s ease-out;*/
+   
 li a{
     display: block;
     padding: 20px 20px;
@@ -138,10 +139,10 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
 #trending{
     background-color: #ffffff;
 }
-#playlists.scroll{
+#playlists .scroll{
     background-color: #2699fb;
 }
-#curated.scroll{
+#curated .scroll{
     background-color: #030abc;
 }
 #playlists section{
@@ -216,7 +217,7 @@ audio{
     padding: 10px;
     width: 150px;;
 }
-.more hover{
+.more:hover{
     background-color: #020659;
 }
 audio::-webkit-media-controls-mute-button{
@@ -230,26 +231,144 @@ audio::-webkit-media-controls-play-button{
 audio::-webkit-media-controls-enclosure{
     background-color: rgba(255, 255, 255, .75);
 }
-#trending::-webkit-scrollbar{
+#trending ::-webkit-scrollbar{
     width: 15px;
 }
-#trending::-webkit-scrollbar-track{
+#trending ::-webkit-scrollbar-track{
     box-shadow: inset 0 0 15px #590242;
 }
-#trending::-webkit-scrollbar-thumb{
+#trending ::-webkit-scrollbar-thumb{
     background: #590242;
     border-radius: 5px;
 }
-#trending::-webkit-scrollbar-thumb:hover{
+#trending ::-webkit-scrollbar-thumb:hover{
     background: #020659;
 }
-#playlists::-webkit-scrollbar, #curated::-webkit-scrollbar{
+#playlists ::-webkit-scrollbar, #curated ::-webkit-scrollbar{
     width: 15px;
 }
-#playlists::-webkit-scrollbar-track, #curated::-webkit-scrollbar-track{
+#playlists ::-webkit-scrollbar-track, #curated ::-webkit-scrollbar-track{
     box-shadow: inset 0 0 15px #020659;
 }
-#playlists::-webkit-scrollbar-thumb, #curated::-webkit-scrollbar-thumb{
+#playlists ::-webkit-scrollbar-thumb, #curated ::-webkit-scrollbar-thumb{
     background-color: #020659;
     border-radius: 5px;
+}
+#playlists ::-webkit-scrollbar-thumb:hover, #curated ::-webkit-scrollbar-thumb:hover{
+    background: #ffffff;
+}
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #ffffff;
+    margin: 0 auto;
+    width: 375px;
+    height: 100vh;
+    padding: 20px;
+}
+header{
+    padding-top: 75px;
+    padding-bottom: 10px;
+    background-image: linear-gradient(to right, #2104d9, #000000);
+}
+header h1, header p{
+    margin: 0 auto;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1em;
+}
+main{
+    background-color: #ffffff;
+    overflow: hidden;
+}
+footer{
+    background-color: #ffffff;
+    color: #590242;
+    text-align: center;
+    font-size: 10pt;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h1{
+    font-size: 1.25em;
+    line-height: 2em;
+}
+h1, h2, h3{
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h2, h3{
+    font-size: 1em;
+    color: #590242;
+    line-height: 2em;
+}
+h2{
+    margin-left: 30px;
+}
+@media screen and (min-width:834px){
+    ul{
+        
+        overflow: visible;
+        position: absolute;
+        top:0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    
+}
+[href="#home"]{
+    position: static;
+}
+label span, input{
+    display: none;
+}
+nav{
+    width: 834px;
+}
+body{
+    width: 834px;
+}
+main{
+    display: grid;
+    grid-template-columns: 417px 417px;
+}
+#trending{
+    width: 834px;
+    grid-column: 1/3;
+}
+#playlists{
+    width: 417px;
+    grid-column: 1/2;
+}
+#curated{
+    width: 417px;
+    grid-column: 2/3;
+}
+#playlists .scroll section, #curated .scroll section{
+    height: 120px;
+    width: 360px;
+}
+#playlists .scroll, #curated .scroll{
+    overflow-x: hidden;
+    overflow-y: auto;
+    grid-template-rows: repeat(5, 40px);
+    grid-template-columns: 417px;
+    row-gap: 120px;
+}
+#playlists section h3, #curated section h3{
+    position: absolute;
+    top:-10px;
+    left:185px;
+}
+#playlists p, #curated p{
+    position: absolute;
+    top:40px;
+    left:160px;
+    right:40px;
+}
+.more{
+    float: right;
+    margin: 10px 32px 30px 0;
+}
 }
