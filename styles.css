@@ -46,5 +46,142 @@ html{
 }
 nav{
     width: 375px;
-    
+    background-color: #030abc;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    text-transform: uppercase;
 }
+nav ul{
+    text-align: center;
+}
+nav h2{
+    visibility: hidden;
+    height: 1px;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: #2104d9;
+    max-height: 0;
+    overflow: hidden;
+}
+   /* transition: max-height .2s ease-out;*/
+li a{
+    display: block;
+    padding: 20px 20px;
+    color: #ffffff;
+    text-decoration: none;
+}
+[href="#home"]{
+    text-transform: capitalize;
+    font-variant: small-caps;
+    font-weight:bold;
+    font-size: 30px;
+    top:0;
+    left:90px;
+    position: absolute;
+    padding: 16px 16px;
+}
+a:hover, input:hover{
+    background-color: #590242;
+}
+label{
+    cursor: pointer;
+    display: inline-block;
+    padding: 28px 28px;
+    position:relative;
+    user-select: none;
+}
+label span{
+    background-color: #ffffff;
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 18px;
+    transition:background-color .2s ease-out;
+}
+label span:before, label span:after{
+    background-color: #ffffff;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+label span:before{
+    top: 5px;
+}
+label span:after{
+    top:-5px;
+}
+input{
+    display: none;
+}
+input:checked ~ ul{
+    max-height: 500px;
+}
+input:checked ~ label span{
+    background: transparent;
+}
+input:checked ~ label span:before{
+    transform: rotate(-45deg);
+}
+input:checked ~ label span:after{
+    transform: rotate(45deg);
+}
+input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after{
+    top: 0;
+}
+#trending{
+    background-color: #ffffff;
+}
+#playlists.scroll{
+    background-color: #2699fb;
+}
+#curated.scroll{
+    background-color: #030abc;
+}
+#playlists section{
+    background-color: #0d8dfb;
+    padding: 10px;
+}
+#curated section{
+    background-color: #020873;
+    padding: 10px;
+}
+#playlists section a, #curated section a{
+    text-decoration: none;
+    color: #ffffff;
+    text-align: center;
+}
+#playlists section:hover, curated section:hover{
+    background-color: #590242;
+}
+#playlists section h3, #curated section h3{
+    color: #ffffff;
+    text-align: center;
+}
+.scroll{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+.scroll section{
+    margin: 10px;
+    position: relative;
+}
+.scroll div{
+    position: absolute;
+    top:251px;
+    background-color: rgba(255, 255, 255, .75);
+    padding: 5px;
+    height: 50px;
+    width: 350px;
+}
+
+
+
