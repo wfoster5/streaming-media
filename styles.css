@@ -182,6 +182,74 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
     height: 50px;
     width: 350px;
 }
-
-
-
+.scroll div h3{
+    margin: 0;
+}
+dl{
+    display: flex;
+    margin: 0;
+    color: #590242;
+    font-size: 1em;
+}
+dt{
+    padding-right: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+dd{
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+audio{
+    position: absolute;
+    bottom: 150px;
+    left: 5px;
+}
+.more{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    margin: 10px 0 30px 30px;
+    display: block;
+    text-decoration: none;
+    background-color: #590242;
+    color: #ffffff;
+    border-radius: 5px;
+    padding: 10px;
+    width: 150px;;
+}
+.more hover{
+    background-color: #020659;
+}
+audio::-webkit-media-controls-mute-button{
+    background-color: #ffffff;
+    border-radius: 50%;
+}
+audio::-webkit-media-controls-play-button{
+    background-color: #ffffff;
+    border-radius: 50%;
+}
+audio::-webkit-media-controls-enclosure{
+    background-color: rgba(255, 255, 255, .75);
+}
+#trending::-webkit-scrollbar{
+    width: 15px;
+}
+#trending::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 15px #590242;
+}
+#trending::-webkit-scrollbar-thumb{
+    background: #590242;
+    border-radius: 5px;
+}
+#trending::-webkit-scrollbar-thumb:hover{
+    background: #020659;
+}
+#playlists::-webkit-scrollbar, #curated::-webkit-scrollbar{
+    width: 15px;
+}
+#playlists::-webkit-scrollbar-track, #curated::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 15px #020659;
+}
+#playlists::-webkit-scrollbar-thumb, #curated::-webkit-scrollbar-thumb{
+    background-color: #020659;
+    border-radius: 5px;
+}
