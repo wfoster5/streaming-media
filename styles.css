@@ -158,7 +158,7 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
     color: #ffffff;
     text-align: center;
 }
-#playlists section:hover, curated section:hover{
+#playlists section:hover, #curated section:hover{
     background-color: #590242;
 }
 #playlists section h3, #curated section h3{
